@@ -1,110 +1,84 @@
-# Student Management System (Java)
+# 🎓 Student Management System (Java + JDBC + MySQL)
 
-##  Project Overview
+A console-based Student Management System built using Java, JDBC, and MySQL that demonstrates full CRUD operations along with additional features like grade calculation and CSV export.
 
-The **Student Management System** is a console-based Java application that allows users to manage student records efficiently.
-This project demonstrates the implementation of **Object-Oriented Programming concepts**, **Java collections**, and **menu-driven programming**.
+## 🚀 Features
+- Add new student (stored in MySQL database)
+- Display all students
+- Search student by ID
+- Update student details
+- Delete student record
+- Automatic calculation of Total Marks, Average Marks, and Grade
+- Export student records to CSV file
+- Count total number of students
 
-The system allows users to perform basic **CRUD (Create, Read, Update, Delete)** operations on student data.
+## 🛠️ Technologies Used
+- Java (OOP Concepts)
+- JDBC (Java Database Connectivity)
+- MySQL Database
+- File Handling (CSV Export)
+- Git & GitHub
 
----
+## 🏗️ Project Architecture
+Main → StudentService → StudentDAO → MySQL Database
 
-##  Features
+## 🗄️ Database Schema
+Table: students
 
-* Add a new student
-* View all students
-* Search student by ID
-* Update student details
-* Delete student record
-* Menu-driven interface
-* Input validation and edge case handling
+Columns:
+- id (INT, Primary Key)
+- name (VARCHAR)
+- age (INT)
+- course (VARCHAR)
+- java_marks (INT)
+- dsa_marks (INT)
+- dbms_marks (INT)
+- os_marks (INT)
+- cn_marks (INT)
 
----
+## 📊 Business Logic
+- Total Marks = Sum of all subject marks
+- Average Marks = Total / 5
+- Grade System:
+  - 90+ → A+
+  - 80–89 → A
+  - 70–79 → B
+  - 60–69 → C
+  - 50–59 → D
+  - Below 50 → F
 
-##  Technologies Used
+## 📁 Export Feature
+Exports all student records into a CSV file (students.csv) including:
+- Student details
+- Total marks
+- Average marks
+- Grade
 
-* Java
-* Object-Oriented Programming (OOP)
-* ArrayList (Java Collections)
-* IntelliJ IDEA
+## 🔑 Key Concepts Implemented
+- Object-Oriented Programming (OOP)
+- Encapsulation
+- DAO Design Pattern
+- JDBC CRUD Operations
+- SQL Queries (SELECT, INSERT, UPDATE, DELETE, COUNT)
+- Exception Handling
+- File Handling (CSV Export)
+- Layered Architecture
 
----
+## 🧠 Learning Outcomes
+- Built a complete CRUD application using Java + MySQL
+- Understood JDBC connectivity and SQL execution flow
+- Implemented DAO-based architecture
+- Learned database design and normalization basics
+- Gained experience in Git and GitHub
+- Implemented file export functionality
 
-##  Concepts Implemented
+## 📂 Project Flow
+User Input → Service Layer → DAO Layer → MySQL Database
 
-This project demonstrates the following programming concepts:
+## 👨‍💻 Future Improvements
+- Add Login/Authentication System
+- Convert into Spring Boot REST API
+- Add GUI using JavaFX or Web Application
 
-* Classes and Objects
-* Encapsulation
-* ArrayList for dynamic data storage
-* Loops and conditional statements
-* Menu-driven application design
-* Basic error handling
-
----
-
-## 📂 Project Structure
-
-```
-StudentManagementSystem
-│
-├── Main.java
-├── Student.java
-└── README.md
-```
-
----
-
-## ▶ How to Run the Project
-
-1. Clone the repository
-
-```
-git clone https://github.com/yourusername/student-management-system-java.git
-```
-
-2. Open the project in IntelliJ IDEA
-
-3. Run `Main.java`
-
-4. Follow the menu options in the console.
-
----
-
-##  Example Menu
-
-```
-Student Management System
-1. Add Student
-2. View Students
-3. Search Student
-4. Update Student
-5. Delete Student
-6. Exit
-```
-
----
-
-## ⚠ Edge Cases Handled
-
-* Prevent duplicate student IDs
-* Handling search for non-existing students
-* Safe deletion of records
-* Handling invalid menu inputs
-
----
-
-##  Future Improvements
-
-* File storage support
-* Database integration using JDBC
-* GUI version using Java Swing or JavaFX
-* Web-based version using Spring Boot
-
----
-
-
-
-## ⭐ If you like this project
-
-Give this repository a **star** on GitHub.
+## ⭐ Purpose of Project
+This project demonstrates backend development skills, database integration using JDBC, CRUD operations, and clean layered architecture suitable for real-world applications.
